@@ -29,10 +29,7 @@ class Config(object):
     # Definindo o timeout do cache em horas (por exemplo, 24 horas)
     CACHE_TIMEOUT_DAYS = config("CACHE_TIMEOUT_DAYS", default=1, cast=int)
     REDIS_CLIENT = redis.Redis(
-        host=config("REDIS_HOST", default="redis://red-crc41r23esus7396cbm0:6379"),
-        port=int(config("REDIS_PORT", default=6379)),
-        db=int(config("REDIS_DB", default=0)),
-        password=config("REDIS_PASSWORD", default=None),
+        host=config("REDIS_URL", default="redis://red-crc41r23esus7396cbm0:6379")
     )
     CACHE_REDIS = REDIS_CLIENT
 
