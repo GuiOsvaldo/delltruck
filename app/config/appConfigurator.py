@@ -24,9 +24,9 @@ class AppConfigurator:
             SecurityHandlers(self.app)
             ApiHandlerException(self.app)
 
-            CidadeCache().initialize_cidade_cache()
-            SexoCache().initialize_sexo_cache()
-            RoleCache().initialize_role_cache()
+          #  CidadeCache().initialize_cidade_cache()
+          #  SexoCache().initialize_sexo_cache()
+          #  RoleCache().initialize_role_cache()
 
             logging.info("1: AppConfigurator.configure: CidadeCache: %s",
                          CidadeCache.get_cidade_cache())

@@ -63,3 +63,7 @@ def _show_log_configurations(app):
     logging.info(
         "4:app/__init__._show_log_configurations(): CACHE_DEFAULT_TIMEOUT: %s", app.config.get("CACHE_DEFAULT_TIMEOUT")
     )
+
+    logging.info(
+        "4:app/__init__._show_log_configurations(): REDIS_CLIENT %s", app.config.get("REDIS_CLIENT")
+    )
