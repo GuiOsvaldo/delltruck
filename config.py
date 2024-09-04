@@ -23,18 +23,18 @@ class Config(object):
     JWT_PUBLIC_KEY = config("JWT_PUBLIC_KEY")  # Chave Pública JWT
 
     # Configura Flask-Caching para usar Redis
-    CACHE_TYPE = "redis"
-    CACHE_DEFAULT_TIMEOUT = config(
-        "CACHE_DEFAULT_TIMEOUT", default=600, cast=int)
+   # CACHE_TYPE = "redis"
+   # CACHE_DEFAULT_TIMEOUT = config(
+    #    "CACHE_DEFAULT_TIMEOUT", default=600, cast=int)
     # Definindo o timeout do cache em horas (por exemplo, 24 horas)
-    CACHE_TIMEOUT_DAYS = config("CACHE_TIMEOUT_DAYS", default=1, cast=int)
-    REDIS_CLIENT = redis.Redis(
-        host=config("REDIS_HOST", default="localhost"),
-        port=int(config("REDIS_PORT", default=6379)),
-        db=int(config("REDIS_DB", default=0)),
-        password=config("REDIS_PASSWORD", default=None),
-    )
-    CACHE_REDIS = REDIS_CLIENT
+   # CACHE_TIMEOUT_DAYS = config("CACHE_TIMEOUT_DAYS", default=1, cast=int)
+   # REDIS_CLIENT = redis.Redis(
+   #     host=config("REDIS_HOST", default="localhost"),
+   #     port=int(config("REDIS_PORT", default=6379)),
+   #     db=int(config("REDIS_DB", default=0)),
+    #    password=config("REDIS_PASSWORD", default=None),
+    #)
+    #CACHE_REDIS = REDIS_CLIENT
     
 
 class DevConfig(Config):
